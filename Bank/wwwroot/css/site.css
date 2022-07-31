@@ -1,0 +1,148 @@
+﻿html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background: #FCFCFF;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+input {
+    margin-top: 120px;
+}
+
+button {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.div-font {
+    font-size: 50px;
+    font-family: 'Engravers MT';
+    color: white;
+}
+
+header {
+    border-radius: 15px;
+    margin-bottom: 60px;
+}
+
+.header-bg {
+    background: #A30B37;
+}
+
+.table {
+    /*background: #BD6B73;*/
+    max-height: 470px;
+    overflow-y: auto;
+    box-shadow: 0px 10px 50px 0px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tbody tr td,
+thead tr th{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+thead tr:nth-child(odd) {
+    background-color: #A30B37;
+    color: white;
+    position: sticky;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FFAA5A;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #BD6B73;
+    color: white;
+}
+
+input[type = "file"] {
+    display: none;
+}
+
+label {
+    color: white;
+    height: 60px;
+    width: 250px;
+    background-color: #14213D;
+    border-radius: 15px;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label:hover {
+    cursor: pointer
+}
+
+button {
+    padding: 15px 25px;
+    border: unset;
+    border-radius: 15px;
+    color: #212121;
+    z-index: 1;
+    background: #e8e8e8;
+    position: relative;
+    font-weight: 1000;
+    font-size: 17px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+    button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 0;
+        border-radius: 15px;
+        background-color: #212121;
+        z-index: -1;
+        -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+        box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+        transition: all 250ms
+    }
+
+    button:hover {
+        color: #e8e8e8;
+    }
+
+        button:hover::before {
+            width: 100%;
+        }

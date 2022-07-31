@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+    string[] TableHeaders = new string[]{
+    " Reference ",
+    " Date ",
+    " Description ",
+    " Credit / Debit ",
+    " Balance ",
+    " Transaction Type ",
+    " Account Number "
+    };
+
+}
+
+<div class="text-center">
+    <form asp-action="Index" method="post" enctype="multipart/form-data">
+        <input name="formFile" id="formFile" class="inputfile" type="file" accept=".dat" />
+        <label for="formFile">
+            <span class="material-icons">
+                file_upload
+            </span>
+            Choose a file
+        </label>
+        <br>
+        <button>
+            Display
+        </button>
+    </form>
+
+    <div class="table">
+        <table class="table table-bordered table-hover">
+            <thead class="th-style">
+                <tr>
+                    @{
+                        foreach (var head in TableHeaders)
+                        {
+                            <th class="th-style">
+                                @head
+                            </th>
+                        }
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    if (Model != null)
+                    {
+                        foreach (var Data in Model)
+                        {
+                            <tr>
+                                <td>@Data.refernce</td>
+                                <td>@Data.date</td>
+                                <td>@Data.description</td>
+                                <td>@Data.credit_debit</td>
+                                <td>@Data.balance</td>
+                                <td>@Data.transaction_type</td>
+                                <td>@Data.account_number</td>
+                            </tr>
+                        }
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>
